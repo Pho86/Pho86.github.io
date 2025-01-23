@@ -1,0 +1,73 @@
+"use client";
+import AnimateSignature from "../AnimateSignature";
+import { motion } from "motion/react";
+import { useState } from "react";
+export default function NavBar() {
+  const [signatureEnded, setSignatureEnded] = useState(false);
+
+  const handleAnimationEnd = () => {
+    setTimeout(() => {
+      setSignatureEnded(true);
+    }, 4000);
+  };
+  return (
+    <>
+      <div className="fixed w-screen h-screen flex justify-center top-0 left-0 z-50 bg-black bg-opacity-10">
+        <div className="w-full flex max-w-screen-xl">
+          <nav
+            className={
+              signatureEnded
+                ? "w-full justify-center flex py-2"
+                : "py-2 max-w-screen-xl flex justify-center w-full"
+            }
+          >
+            <motion.div
+              className={
+                signatureEnded
+                  ? `flex bg-bg-dark rounded-xl gap-4 max-w-screen-xl w-full px-6 lg:px-4 drop-shadow-md justify-between h-max`
+                  : "h-full w-full px-6 lg:px-4"
+              }
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
+              <motion.div
+                initial={{ x: "50vw", y: "50vh" }}
+                animate={{ x: 0, y: 0 }}
+                transition={{ duration: 3, ease: "easeInOut", delay: 3 }}
+              >
+                <motion.span
+                  className="cursor-pointer"
+                >
+                  <AnimateSignature
+                  onAnimationEnd={() => handleAnimationEnd()}
+                  />
+                </motion.span>
+              </motion.div>
+              {signatureEnded && 
+              <ul className="w-full flex justify-end items-center gap-2">
+                {["About", "Projects", "Contact"].map((item, index) => (
+                  <NavBarItem key={index} index={index} name={item} />
+                ))}
+              </ul>
+              }
+            </motion.div>
+          </nav>
+        </div>
+      </div>
+    </>
+  );
+}
+
+function NavBarItem({ name, index }: { name: string, index:number }) {
+  return (
+    <motion.li
+      className="cursor-pointer px-4 p-2 transition-all hover:bg-primary-200 rounded-xl"
+      initial={{ opacity: 0, y: 5, filter: "blur(2px)" }}
+      animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+      transition={{ duration: 0.6, delay: index * 0.3 }}
+    >
+      {name}
+    </motion.li>
+  );
+}
