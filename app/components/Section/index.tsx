@@ -1,15 +1,18 @@
+"use client"
 import { twMerge } from "tailwind-merge";
-
+import { motion } from "motion/react";
 export default function Section({
   children,
   className,
   bg,
-  id
+  id,
+  title,
 }: {
   children?: React.ReactNode;
   className?: string;
   bg?: string;
-  id?: string
+  id?: string;
+  title?: string;
 }) {
   return (
     <div
@@ -22,10 +25,17 @@ export default function Section({
     >
       <section
         className={twMerge(
-          `max-w-screen-xl w-full px-6 lg:px-4 h-full flex flex-col items-center justify-center gap-3`,
+          `max-w-screen-lg w-full px-6 lg:px-4 h-full flex flex-col gap-3`,
           className
         )}
       >
+        <motion.div
+          className=""
+          initial={{ opacity: 0, filter: "blur(5px)" }}
+          whileInView={{ opacity: 1, filter: "blur(0px)" }}
+        >
+          {title && <h2 className="text-3xl font-bold">{title}</h2>}
+        </motion.div>
         {children}
       </section>
     </div>

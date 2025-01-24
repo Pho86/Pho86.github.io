@@ -23,10 +23,10 @@ export default function NavBar({
       <div
         className={twMerge(
           `fixed w-screen h-screen flex justify-center pointer-events-none top-0 left-0 z-50 ` +
-            (!signatureEnded ? "bg-bg-primary" : "")
+            (!signatureEnded ? "" : "")
         )}
       >
-        <div className="w-full flex max-w-screen-xl">
+        <div className="w-full flex max-w-screen-lg">
           <nav
             className={
               signatureEnded
@@ -37,7 +37,7 @@ export default function NavBar({
             <motion.div
               className={
                 signatureEnded
-                  ? `flex bg-bg-primary rounded-xl gap-4 max-w-screen-xl w-full px-6 lg:px-4 drop-shadow-sm justify-between h-max pointer-events-auto`
+                  ? `flex bg-bg-primary rounded-xl gap-4 max-w-screen-lg w-full px-6 lg:px-4 drop-shadow-sm justify-between h-max pointer-events-auto`
                   : "h-full w-full px-6 lg:px-4"
               }
               initial={{ opacity: 0 }}
