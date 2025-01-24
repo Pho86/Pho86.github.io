@@ -22,7 +22,7 @@ export default function Section({
     >
       <section
         className={twMerge(
-          `max-w-screen-lg w-full px-6 lg:px-4 h-full flex flex-col items-center justify-center gap-3`,
+          `max-w-screen-xl w-full px-6 lg:px-4 h-full flex flex-col items-center justify-center gap-3`,
           className
         )}
       >

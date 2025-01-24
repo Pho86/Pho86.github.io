@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Rethink_Sans, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import NavBar from "./components/NavBar";
 
 const rethinkSans = Rethink_Sans({
   variable: "--font-rethink-sans",
@@ -28,7 +27,6 @@ export default function RootLayout({
       <body
         className={`${rethinkSans.className} ${geistMono.variable} antialiased`}
       >
-        <NavBar/>
         {children}
       </body>
     </html>

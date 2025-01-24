@@ -17,7 +17,7 @@ export default function Button({
     <button
       onClick={onClick}
       className={twMerge(
-        `flex gap-2 py-2 px-4 font-semibold border-2
+        `flex gap-2 py-2 px-5 font-semibold border-2
         ${`${
           primary
             ? "text-white border-primary-light border-t-primary-light border-r-primary-dark border-b-primary-dark bg-primary-600 hover:bg-primary-dark"
