@@ -7,12 +7,14 @@ export default function Section({
   bg,
   id,
   title,
+  grid
 }: {
   children?: React.ReactNode;
   className?: string;
   bg?: string;
   id?: string;
   title?: string;
+  grid?: boolean;
 }) {
   return (
     <div
@@ -25,12 +27,12 @@ export default function Section({
     >
       <section
         className={twMerge(
-          `max-w-screen-lg w-full px-6 lg:px-4 h-full flex flex-col gap-3`,
+          `max-w-screen-lg w-full px-6 lg:px-4 h-full flex flex-col gap-2 `, grid ? "md:grid md:grid-cols-2" : "",
           className
         )}
       >
         <motion.div
-          className=""
+          className="col-span-2"
           initial={{ opacity: 0, filter: "blur(5px)" }}
           whileInView={{ opacity: 1, filter: "blur(0px)" }}
         >

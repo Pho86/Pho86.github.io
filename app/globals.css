@@ -5,3 +5,7 @@
 body {
   text-wrap: pretty;
 }
+
+p {
+  @apply leading-relaxed;
+}
