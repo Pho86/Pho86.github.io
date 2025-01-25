@@ -14,7 +14,7 @@ export default function ContactSection({}: {
     <Section title="Contact" id="contact" grid="md:grid-cols-2">
       <motion.div
         className="w-full min-w-[100px] h-full mt-2"
-        initial={{ opacity: 0, filter: "blur(5px)" }}
+        initial={{ opacity: 0, filter: "blur(4px)" }}
         whileInView={{ opacity: 1, filter: "blur(0px)" }}
         transition={{ duration: 0.4 }}
       >
@@ -22,7 +22,7 @@ export default function ContactSection({}: {
       </motion.div>
       <motion.div
         className="flex flex-col h-full gap-4"
-        initial={{ opacity: 0, filter: "blur(5px)" }}
+        initial={{ opacity: 0, filter: "blur(4px)" }}
         whileInView={{ opacity: 1, filter: "blur(0px)" }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >

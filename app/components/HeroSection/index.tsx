@@ -7,7 +7,7 @@ import { motion } from "motion/react";
 export default function HeroSection() {
   return (
     <Section
-      className="w-full min-h-[80dvh] md:min-h-[100dvh] h-full justify-start mt-64"
+      className="w-full min-h-[80dvh] md:min-h-[100dvh] h-full flex items-center justify-center"
       bg="bg-primary-50"
       id="home"
     >
@@ -15,22 +15,26 @@ export default function HeroSection() {
         <div className="flex flex-col gap-3 h-full">
           <motion.h1
             className="text-5xl font-bold text-pretty leading-tight"
-            initial={{ opacity: 0, y: 8, filter: "blur(15px)" }}
+            initial={{ opacity: 0, y: 8, filter: "blur(4px)" }}
             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             Hi I&apos;m Philip <br /> a Full-Stack Developer
           </motion.h1>
-          <motion.blockquote initial={{
-            opacity: 0,
-            y: 8,
-          }} whileInView={{
-            opacity: 1,
-            y: 0,
-          }} transition={{
-            duration: 0.45,
-            delay: 0.6,
-          }}>
+          <motion.blockquote
+            initial={{
+              opacity: 0,
+              y: 8,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.45,
+              delay: 0.6,
+            }}
+          >
             Creating interactive and intuitive adventures digitally.
           </motion.blockquote>
           <div className="flex gap-3">

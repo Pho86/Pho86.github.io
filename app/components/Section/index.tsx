@@ -35,7 +35,7 @@ export default function Section({
       >
         <motion.div
           className="col-span-2"
-          initial={{ opacity: 0, filter: "blur(5px)" }}
+          initial={{ opacity: 0, filter: "blur(4px)" }}
           whileInView={{ opacity: 1, filter: "blur(0px)" }}
         >
           {title && <h2 className="text-4xl font-bold">{title}</h2>}
