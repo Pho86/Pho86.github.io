@@ -22,7 +22,7 @@ export default function ProjectScroll({ data }: { data: ProjectEntry[] }) {
           <motion.div
             key={index}
             className="flex justify-start md:pt-16 gap-10"
-            initial={{ opacity: 0, filter: "blur(5px)" }}
+            initial={{ opacity: 0, filter: "blur(4px)" }}
             whileInView={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ duration: 0.6 }}
           >

@@ -28,7 +28,7 @@ export default function IconButton({
   return (
     <button
       className={twMerge(
-        `transition-all duration-150 gap-1 text-4xl hover:text-primary-500 hover:drop-shadow-md ` +
+        `transition-all duration-150 gap-1 text-4xl text-primary-600 hover:text-primary-800 ` +
           className
       )}
       onClick={onClick}

@@ -37,7 +37,7 @@ export default function Footer() {
   return (
     <motion.footer
       className="w-full flex flex-col gap-6 items-center justify-center bg-primary-100 border-t-2 pt-8 px-4 pb-16"
-      initial={{ opacity: 0, filter: "blur(5px)" }}
+      initial={{ opacity: 0, filter: "blur(4px)" }}
       whileInView={{ opacity: 1, filter: "blur(0px)" }}
       transition={{ duration: 0.6 }}
     >
@@ -124,7 +124,7 @@ function Scroll({
 }) {
   return (
     <li
-      className="hover:text-primary-600 cursor-pointer transition-all"
+      className="hover:text-primary-700 hover:font-medium text-primary-600 cursor-pointer transition-all"
       onClick={() => onClick && onClick(id)}
     >
       {children}

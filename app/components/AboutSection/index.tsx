@@ -7,15 +7,15 @@ export default function AboutSection() {
     <Section id="about" bg="bg-light" title="About Me" grid="md:grid-cols-2">
       <motion.div
         className="self-baseline relative w-full space-y-2 overflow-hidden"
-        initial={{ opacity: 0, filter: "blur(5px)" }}
+        initial={{ opacity: 0, filter: "blur(4px)" }}
         whileInView={{ opacity: 1, filter: "blur(0px)" }}
         transition={{ duration: 0.3, delay: 0.1 }}
       >
         <p className="text-pretty">
-          Hey, I&apos;m Philip, I love developing web and mobile products focusing on providing users
-          with seamless and responsive experiences. Creating interactive digital
-          products is a passion of mine, and I enjoy creating projects that
-          solve problems.
+          Hey, I&apos;m Philip, I love developing web and mobile products
+          focusing on providing users with seamless and responsive experiences.
+          Creating interactive digital products is a passion of mine, and I
+          enjoy creating projects that solve problems.
         </p>
         <p className="text-pretty">
           Feel free to explore my work on{" "}
@@ -49,7 +49,7 @@ export default function AboutSection() {
       </motion.div>
       <motion.div
         className="h-[400px] md:h-[400px] w-full"
-        initial={{ opacity: 0, filter: "blur(5px)" }}
+        initial={{ opacity: 0, filter: "blur(4px)" }}
         whileInView={{ opacity: 1, filter: "blur(0px)" }}
         transition={{ duration: 0.3, delay: 0.2 }}
       >

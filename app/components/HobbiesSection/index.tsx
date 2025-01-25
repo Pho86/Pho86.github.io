@@ -36,7 +36,7 @@ export default function HobbiesSection() {
     <Section title="Hobbies" id="hobbies" grid="md:grid-cols-2">
       <motion.div
         className="flex flex-col gap-2"
-        initial={{ opacity: 0, filter: "blur(5px)" }}
+        initial={{ opacity: 0, filter: "blur(4px)" }}
         whileInView={{ opacity: 1, filter: "blur(0px)" }}
         transition={{ duration: 0.5 }}
       >
@@ -81,10 +81,10 @@ export default function HobbiesSection() {
       </motion.div>
       <motion.div
         key={activeImage}
-        initial={{ opacity: 0, filter: "blur(5px)" }}
+        initial={{ opacity: 0, filter: "blur(4px)" }}
         whileInView={{ opacity: 1, filter: "blur(0px)" }}
         animate={{ opacity: 1, filter: "blur(0px)" }}
-        exit={{ opacity: 0, filter: "blur(5px)" }}
+        exit={{ opacity: 0, filter: "blur(4px)" }}
         transition={{ duration: 0.5 }}
       >
         <Image

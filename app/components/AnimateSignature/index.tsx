@@ -9,15 +9,15 @@ export default function AnimateSignature({
   const ref = useRef(null);
   const isVisible = useInView(ref);
   return (
-    <motion.div ref={ref} className="max-h-[50px] w-full flex justify-start items-start">
+    <motion.div ref={ref} className=" w-full flex justify-center items-center">
       <motion.svg
         // SVG properties
-        width="250"
-        height="50"
+        width="500"
+        height="100"
         initial={{ scale: 3 }}
-        animate={{ scale: isVisible ? .6 : 5 }}
+        animate={{ scale: isVisible ? 3 : 5 }}
         transition={{ duration: 3, delay: 3 }}
-        viewBox="250 0 900 322"
+        viewBox="0 0 555 322"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         onLayoutAnimationComplete={onAnimationEnd}
