@@ -5,6 +5,7 @@ import { twMerge } from "tailwind-merge";
 import { FaGithub } from "react-icons/fa6";
 import { FiExternalLink } from "react-icons/fi";
 import ProjectTags from "../ProjectTags";
+import IconButton from "../IconButton";
 export default function ProjectCard({
   title,
   description,
@@ -50,20 +51,16 @@ export default function ProjectCard({
             </Link>
           </div>
           <div className="md:hidden flex gap-2 font-bold text-3xl items-center">
-            <Link
-              target="_blank"
-              href={github}
-              className="hover:text-primary-600 transition-all"
-            >
+            <IconButton target="_blank" href={github}>
               <FaGithub />
-            </Link>
-            <Link
+            </IconButton>
+            <IconButton
               target="_blank"
               href={external}
               className="hover:text-primary-600 transition-all"
             >
               <FiExternalLink />
-            </Link>
+            </IconButton>
           </div>
         </div>
         <div className="flex flex-col gap-2 h-full justify-between mt-1">

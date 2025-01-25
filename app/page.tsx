@@ -6,6 +6,8 @@ import NavBar from "./components/NavBar";
 import AboutSection from "./components/AboutSection";
 import ProjectSection from "./components/ProjectSection";
 import Footer from "./components/Footer";
+import ContactSection from "./components/ContactSection";
+import HobbiesSection from "./components/HobbiesSection";
 export default function Home() {
   useEffect(() => {
     
@@ -19,13 +21,15 @@ export default function Home() {
   }, []);
   const [animation, setAnimation] = useState(true);
   return (
-    <main className="flex w-full h-full flex-col gap-12">
+    <main className="flex w-full h-full flex-col gap-24">
       <NavBar setSignatureEnd={() => setAnimation(true)} />
       {animation && (
         <>
           <HeroSection />
           <AboutSection />
           <ProjectSection />
+          <HobbiesSection />
+          <ContactSection />
           <Footer />
         </>
       )}

@@ -36,7 +36,7 @@ export default function Footer() {
   }, []);
   return (
     <motion.footer
-      className="w-full flex flex-col gap-6 items-center justify-center bg-primary-100 border-t-2 pt-8 mt-80 px-4 pb-16"
+      className="w-full flex flex-col gap-6 items-center justify-center bg-primary-100 border-t-2 pt-8 mt-40 px-4 pb-16"
       initial={{ opacity: 0, filter: "blur(5px)" }}
       whileInView={{ opacity: 1, filter: "blur(0px)" }}
       transition={{ duration: 0.6 }}
@@ -90,6 +90,12 @@ export default function Footer() {
             </Scroll>
             <Scroll id="projects" onClick={handleScroll("projects")}>
               Projects
+            </Scroll>
+            <Scroll id="hobbies" onClick={handleScroll("hobbies")}>
+              Hobbies
+            </Scroll>
+            <Scroll id="contact" onClick={handleScroll("contact")}>
+              Contact
             </Scroll>
           </ul>
         </div>
