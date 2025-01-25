@@ -5,6 +5,7 @@ import Lenis from "@studio-freight/lenis";
 import NavBar from "./components/NavBar";
 import AboutSection from "./components/AboutSection";
 import Section from "./components/Section";
+import ProjectSection from "./components/ProjectSection";
 export default function Home() {
   useEffect(() => {
     
@@ -23,10 +24,9 @@ export default function Home() {
       {animation && (
         <>
           <HeroSection />
-          <AboutSection/>
-          <Section className="my-24">
-
-          </Section>
+          <AboutSection />
+          <ProjectSection />
+          <Section className="my-24 mb-[500px]"></Section>
           <p>FOOTER</p>
         </>
       )}

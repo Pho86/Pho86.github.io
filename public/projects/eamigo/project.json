@@ -1,0 +1,17 @@
+{
+    "title": "E-Amigo",
+    "projectname": "eamigo",
+    "description": "Social media web application to help gamers find an online community and find other gamers to play games with or just to chill with or find comrades.",
+    "link": "/projects/eamigo",
+    "github":"https://github.com/Pho86/E-Amigo",
+    "external":"https://eamigo.vercel.app/",
+    "mockup": "/mockup.webp",
+    "tags": ["Next.js", "TypeScript", "Prisma", "Next-Auth", "Tailwind CSS",  "Cypress"],
+    "brief": "E-Amigo is a social media web application to help gamers find an online community and find other gamers to play games with or just to chill with or find comrades. Find other gamer amigos globally and enjoy creating authentic connections among our community members. Each post has the game users want to play and contains information about what they are looking for.",
+    "briefImage": "/problem.png",
+    "process": "For E-Amigo, Prisma was used to handle database functions with a database hosted on CockroachDB. After the site was connected to the database with hooks along with server sided rendering and props. Furthermore, api routes were used to connect to the database along with axios to make requests to the routes. In the post, it contains information of things such as, the title, the content, the game, and what tags of what type of users they are looking for when they play the game. Furthermore, you can see the traction of each post through the amount of comments and likes on each post.",
+    "processImage": "/problem.png",
+    "code": "model Post {\n  id            Int       @id @default(sequence())\n  title         String\n  content       String\n  userID        String\n  tags          String[]\n  game          String\n  createdAt     DateTime  @default(now())\n  updatedAt     DateTime  @updatedAt\n  user          User      @relation(fields: [userID], references: [id])\n  comments      Comment[]\n  likes         Like[]\n}",
+    "outcomeImage": "/outcome.png",
+    "conclusion": "A challenge I faced, was this being the amount of /api routes needed for the project. Each fragment and entity is being submitted to the /api routes to make requests to the database. However, working with Prisma, Next-auth, and Typescript was a fun challenge to me and I look forward to working more with these technologies and pathing towards using the full T3 stack."
+}
