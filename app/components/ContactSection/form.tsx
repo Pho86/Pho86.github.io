@@ -40,7 +40,7 @@ export default function ContactForm() {
     <form
       className="flex justify-center align-center flex-col gap-5 w-full"
       onSubmit={handleSubmit}
-    //   @ts-expect-error handleChange is not assignable to type 'EventHandler'
+      //   @ts-expect-error handleChange is not assignable to type 'EventHandler'
       onChange={handleChange}
     >
       <div className="grid grid-cols-2 gap-5">
@@ -51,12 +51,12 @@ export default function ContactForm() {
               name="from_name"
               id="from_name"
               required
-              className="block rounded py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-text focus:bg-transparent appearance-none focus:outline-none focus:ring-0 focus:border-primary peer"
+              className="block rounded py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-primary-500 focus:bg-transparent appearance-none focus:outline-none focus:ring-0 focus:border-primary peer"
               placeholder=" "
             />
             <label
               htmlFor="from_name"
-              className="absolute text-sm duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-text peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+              className="absolute text-sm duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-primary-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
             >
               Name
             </label>
@@ -69,12 +69,12 @@ export default function ContactForm() {
               name="email"
               id="email"
               required
-              className="block rounded py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-text focus:bg-transparent appearance-none focus:outline-none focus:ring-0 focus:border-primary peer"
+              className="block rounded py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-primary-500 focus:bg-transparent appearance-none focus:outline-none focus:ring-0 focus:border-primary peer"
               placeholder=" "
             />
             <label
               htmlFor="email"
-              className="absolute text-sm duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-primary-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+              className="absolute text-sm duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-primary-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
             >
               Email
             </label>
@@ -89,12 +89,12 @@ export default function ContactForm() {
             name="subject"
             id="subject"
             required
-            className="block rounded py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-text focus:bg-transparent appearance-none focus:outline-none focus:ring-0 focus:border-primary peer"
+            className="block rounded py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-primary-500 focus:bg-transparent appearance-none focus:outline-none focus:ring-0 focus:border-primary peer"
             placeholder=" "
           />
           <label
             htmlFor="subject"
-            className="absolute text-sm duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-text peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+            className="absolute text-sm duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-primary-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
           >
             Subject
           </label>
@@ -107,24 +107,20 @@ export default function ContactForm() {
             id="message"
             required
             rows={5}
-            className="block rounded py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-text focus:bg-transparent appearance-none focus:outline-none focus:ring-0 focus:border-primary peer"
+            className="block rounded py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-primary-500 focus:bg-transparent appearance-none focus:outline-none focus:ring-0 focus:border-primary peer"
             placeholder=" "
           />
           <label
             htmlFor="message"
-            className="absolute text-sm  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-text peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+            className="absolute text-sm  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-primary-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
           >
             Message
           </label>
         </div>
       </div>
       <div className="flex justify-center items-center my-4">
-        <Button
-          type="submit"
-          disabled={disabled}
-          className="w-full"
-        >
-            {buttontxt}
+        <Button type="submit" disabled={disabled} className="w-full">
+          {buttontxt}
         </Button>
       </div>
     </form>
