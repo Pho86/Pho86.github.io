@@ -1,0 +1,16 @@
+{
+    "title": "LocalToMe",
+    "projectname": "localtome",
+    "description": "LocalToMe helps locate and provide low-income families or individuals with free & accessible food resources near their area within their budgets.",
+    "link": "/projects/localtome",
+    "github":"https://github.com/phoenixlai833/LocalToMe",
+    "external":"https://localtome.vercel.app/",
+    "mockup": "/mockup.webp",
+    "tags": ["Next.js", "Firebase", "Storybook", "Mapbox", "Styled-components" ],
+    "brief": "LocalToMe is a web application that locates and provides low-income families/individuals with free & accessible food resources near their area within their budgets. To accomplish this project, I collaborated with 5 other members, 3 developers and 2 designers from BCIT’s Full Stack Web Development and Digital Design and Development programs.",
+    "briefImage": "/map.png",
+    "process": "Throughout this project, we had to figure out what underprivileged people actually wanted and how we would help them. To do so, we tried to contact food banks themselves, but they were unresponsive and then tried to look into webscraping, however deemed that out of scope and too complicated for our project with a lot of unknown variables that might occur. Then we found a public API from Vancouver that sourced out all of the free, low cost programs in downtown Vancouver, which we ended up using.",
+    "processImage": "/foodbankapi.png",
+    "outcomeImage": "/home.png",
+    "conclusion": "A challenge I faced, was this project being the first time I worked with using data from an actual database (Firebase), and had to figure out how to grab data and incorporate it into our designs. During LocalToMe, I focused on scripting reusable components for the front end, helping design the prototype, and creating responsive web design. In the process of creating reusable components, I used styled-components to style it and then wrote documentation inside of Storybook, detailing how the component is used, and what information/props it requires, so other developers can see what the component needs. Furthermore, developed a documentation and organization system for the components that team members would follow when scripting components. In the end, we were able to successfully build a fully functional web application and present our project to industry experts and over 100 people."
+}
