@@ -27,7 +27,7 @@ export default function Section({
     >
       <section
         className={twMerge(
-          `max-w-default w-full px-6 lg:px-4 h-full flex flex-col gap-4 ${
+          `max-w-default w-full px-6 lg:px-4 h-full flex flex-col gap-5 ${
             grid ? "md:grid md:grid-cols-2 " + grid : ""
           }`,
           className

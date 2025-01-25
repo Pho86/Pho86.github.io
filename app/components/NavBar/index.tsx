@@ -56,7 +56,7 @@ export default function NavBar({
               </motion.div>
               {signatureEnded && (
                 <ul className="w-full flex justify-end items-center gap-2">
-                  {["Home", "About", "Projects"].map((item, index) => (
+                  {["Home", "About", "Projects", "Contact"].map((item, index) => (
                     <NavBarItem key={index} index={index} name={item} />
                   ))}
                 </ul>
