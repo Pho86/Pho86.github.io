@@ -6,7 +6,7 @@
     "github":"https://github.com/pho86/Tenryou",
     "external":"https://tenryou.live",
     "mockup": "/mockup.webp",
-    "tags": ["Next.js", "TypeScript",  "Vercel AI SDK", "Tailwind CSS", "Cypress"],
+    "tags": ["Next.js", "TypeScript",  "Vercel AI SDK", "Gemini", "Tailwind CSS", "Cypress"],
     "brief": "Tenryou is a companion website create for the action-rpg, Genshin Impact. Tenryou is intended to help players view information from the game in a visual and cohesive manner via information pulled from various resources providing up-to-date information with a teambuilder to help users create an ideal team.",
     "briefImage": "/characters.png",
     "process": "For Tenryou, api's were used from various sources based around the game Genshin Impact, such as genshin-db, enka.network, and ambr.top, pulling the latest information created by other developers. Furthermore, to allow the teambuilder to be used, I used both Gemini and OpenAI to test them out, and decided to stay with Gemini because it was often more consistent in following the prompt and with the more recent characters because Gemini had more access to google, while OpenAI is trained on older data, I created for the team that was needed to be created and had more success with using vercel's AI sdk. Vercel's AI SDKs, I found ran better with Gemini because with serverless and edge functions to ensure the application was the most cost effective because running it on the client would cause more strain and would often time out because the request would often run too long and end up not finishing the prompt generation. ",

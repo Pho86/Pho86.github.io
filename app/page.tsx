@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import Lenis from "@studio-freight/lenis";
 import NavBar from "./components/NavBar";
 import AboutSection from "./components/AboutSection";
-import Section from "./components/Section";
 import ProjectSection from "./components/ProjectSection";
+import Footer from "./components/Footer";
 export default function Home() {
   useEffect(() => {
     
@@ -26,8 +26,7 @@ export default function Home() {
           <HeroSection />
           <AboutSection />
           <ProjectSection />
-          <Section className="my-24 mb-[500px]"></Section>
-          <p>FOOTER</p>
+          <Footer />
         </>
       )}
     </main>

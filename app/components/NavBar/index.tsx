@@ -25,18 +25,18 @@ export default function NavBar({
             (!signatureEnded ? "" : "")
         )}
       >
-        <div className="w-full flex max-w-screen-xl">
+        <div className="w-full flex max-w-default">
           <nav
             className={
               signatureEnded
                 ? "w-full justify-center flex py-2"
-                : "py-2 max-w-screen-xl flex justify-center w-full"
+                : "py-2 max-default flex justify-center w-full"
             }
           >
             <motion.div
               className={
                 signatureEnded
-                  ? `flex bg-bg-primary rounded-xl gap-4 max-w-screen-xl w-full px-6 lg:px-4 drop-shadow-sm justify-between h-max pointer-events-auto`
+                  ? `flex bg-bg-primary rounded-xl gap-4 w-full px-6 lg:px-4 drop-shadow-sm justify-between h-max pointer-events-auto`
                   : "h-full w-full px-6 lg:px-4"
               }
               initial={{ opacity: 0 }}
@@ -56,7 +56,7 @@ export default function NavBar({
               </motion.div>
               {signatureEnded && (
                 <ul className="w-full flex justify-end items-center gap-2">
-                  {["About", "Projects", "Contact"].map((item, index) => (
+                  {["Home", "About", "Projects"].map((item, index) => (
                     <NavBarItem key={index} index={index} name={item} />
                   ))}
                 </ul>

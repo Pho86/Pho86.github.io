@@ -9,6 +9,7 @@ export default function HeroSection() {
     <Section
       className="w-full min-h-[80dvh] md:min-h-[100dvh] h-full justify-start mt-64"
       bg="bg-primary-50"
+      id="home"
     >
       <div className="flex h-full gap-5 w-full ">
         <div className="flex flex-col gap-3 h-full">
