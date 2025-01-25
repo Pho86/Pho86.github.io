@@ -14,7 +14,6 @@ export default function NavBar({
     setTimeout(() => {
       setSignatureEnded(true);
       setSignatureEnd(true);
-
     }, 4000);
   };
 
@@ -26,7 +25,7 @@ export default function NavBar({
             (!signatureEnded ? "" : "")
         )}
       >
-        <div className="w-full flex max-w-screen-lg">
+        <div className="w-full flex max-w-screen-xl">
           <nav
             className={
               signatureEnded
@@ -37,7 +36,7 @@ export default function NavBar({
             <motion.div
               className={
                 signatureEnded
-                  ? `flex bg-bg-primary rounded-xl gap-4 max-w-screen-lg w-full px-6 lg:px-4 drop-shadow-sm justify-between h-max pointer-events-auto`
+                  ? `flex bg-bg-primary rounded-xl gap-4 max-w-screen-xl w-full px-6 lg:px-4 drop-shadow-sm justify-between h-max pointer-events-auto`
                   : "h-full w-full px-6 lg:px-4"
               }
               initial={{ opacity: 0 }}

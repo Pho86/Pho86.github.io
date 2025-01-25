@@ -14,7 +14,7 @@ export default function Section({
   bg?: string;
   id?: string;
   title?: string;
-  grid?: boolean;
+  grid?: string;
 }) {
   return (
     <div
@@ -27,7 +27,7 @@ export default function Section({
     >
       <section
         className={twMerge(
-          `max-w-screen-lg w-full px-6 lg:px-4 h-full flex flex-col gap-2 `, grid ? "md:grid md:grid-cols-2" : "",
+          `max-w-screen-xl w-full px-6 lg:px-4 h-full flex flex-col gap-4 ${grid ? "md:grid md:grid-cols-2 " + grid : ""}`,
           className
         )}
       >
@@ -36,7 +36,7 @@ export default function Section({
           initial={{ opacity: 0, filter: "blur(5px)" }}
           whileInView={{ opacity: 1, filter: "blur(0px)" }}
         >
-          {title && <h2 className="text-3xl font-bold">{title}</h2>}
+          {title && <h2 className="text-4xl font-bold">{title}</h2>}
         </motion.div>
         {children}
       </section>
