@@ -12,7 +12,7 @@ export default function AboutSection() {
         transition={{ duration: 0.3, delay: 0.1 }}
       >
         <p className="text-pretty">
-          I love developing web and mobile products focusing on providing users
+          Hey, I&apos;m Philip, I love developing web and mobile products focusing on providing users
           with seamless and responsive experiences. Creating interactive digital
           products is a passion of mine, and I enjoy creating projects that
           solve problems.
