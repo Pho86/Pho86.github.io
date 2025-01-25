@@ -11,7 +11,7 @@ export default function ProjectCard({
   tags,
   external,
   github,
-  href,
+//   href,
   projectname,
   mockup,
 }: {
@@ -42,7 +42,8 @@ export default function ProjectCard({
       <div className="flex flex-col">
         <div className="flex justify-between">
           <div className="">
-            <Link href={href} className="w-full flex">
+            <Link href={github} className="w-full flex">
+              {/* <Link href={href} className="w-full flex"> */}
               <h3 className="transition-all text-3xl font-bold hover:text-primary-600">
                 {title}
               </h3>
@@ -71,7 +72,6 @@ export default function ProjectCard({
             <div className="flex flex-wrap gap-2">
               <ProjectTags text={tags} />
             </div>
-            
           </div>
         </div>
       </div>

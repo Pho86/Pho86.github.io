@@ -4,7 +4,7 @@ import localtome from "../../public/projects/localtome/project.json";
 import neko from "../../public/projects/neko/project.json";
 
 export default async function Projects() {
-    const projects = [eamigo, tenryou, localtome, neko];
+    const projects = [tenryou, eamigo, localtome, neko];
     return projects;
 }
 

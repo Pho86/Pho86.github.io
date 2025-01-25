@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      maxWidth: {
+        'default' : '1280px'
+      },
       colors: {
         primary: {
           50: "#fefefe",
