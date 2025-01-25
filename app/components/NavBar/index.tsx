@@ -36,7 +36,7 @@ export default function NavBar({
             <motion.div
               className={
                 signatureEnded
-                  ? `flex bg-bg-primary rounded-xl gap-4 max-w-default w-full px-6 lg:px-4 drop-shadow-sm justify-between h-max pointer-events-auto`
+                  ? `flex bg-bg-primary rounded-xl gap-4 w-full px-6 lg:px-4 drop-shadow-sm justify-between h-max pointer-events-auto`
                   : "h-full w-full px-6 lg:px-4"
               }
               initial={{ opacity: 0 }}

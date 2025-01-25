@@ -4,7 +4,7 @@ import Link from "next/link";
 import TechnologyCloud from "../TechnologySection";
 export default function AboutSection() {
   return (
-    <Section id="about" bg="bg-light" title="About Me" grid="md:grid-cols-1">
+    <Section id="about" bg="bg-light" title="About Me" grid="md:grid-cols-2">
       <motion.div
         className="self-baseline relative w-full space-y-2 overflow-hidden"
         initial={{ opacity: 0, filter: "blur(5px)" }}
