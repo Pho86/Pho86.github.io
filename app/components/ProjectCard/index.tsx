@@ -26,7 +26,7 @@ export default function ProjectCard({
   mockup: string;
 }) {
   return (
-    <div className={twMerge("flex gap-2 group flex-col ")}>
+    <div className={twMerge("flex gap-3 group flex-col ")}>
       <Link
         href={external}
         target={"_blank"}
