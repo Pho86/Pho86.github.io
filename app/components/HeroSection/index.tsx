@@ -140,6 +140,7 @@ export default function HeroSection() {
           <LogoImage
             src="/logos/typescript.svg"
             className="rotate-6 hover:-rotate-3 "
+            alt="TypeScript Logo, click to scroll to technologies section"
             animate={
               signatureAnimation
                 ? {}
@@ -150,6 +151,7 @@ export default function HeroSection() {
           <LogoImage
             src="/logos/react.svg"
             className="-rotate-3 hover:rotate-3 "
+            alt="React.js Logo, click to scroll to technologies section"
             animate={
               signatureAnimation
                 ? {}
@@ -162,6 +164,7 @@ export default function HeroSection() {
           <LogoImage
             src="/logos/prisma.svg"
             className=" -rotate-3 hover:rotate-3 "
+            alt="Prisma Logo, click to scroll to technologies section"
             animate={
               signatureAnimation
                 ? {}
@@ -171,6 +174,7 @@ export default function HeroSection() {
           />
           <LogoImage
             src="/logos/nextjs.svg"
+            alt="Next.js Logo, click to scroll to technologies section"
             className="rotate-3 hover:-rotate-3 "
             animate={
               signatureAnimation
@@ -190,11 +194,13 @@ function LogoImage({
   className,
   animate,
   transition,
+  alt,
 }: {
   src: string;
   className?: string;
   animate?: TargetAndTransition;
   transition?: Transition;
+  alt: string
 }) {
   return (
     <motion.div
@@ -205,11 +211,12 @@ function LogoImage({
     >
       <Image
       src={src}
-      alt="React Logo"
+      title={alt}
+      alt={alt}
       width={125}
       height={125}
       className={twMerge(
-        "p-6 rounded-3xl border shadow hover:shadow-md pb-6 transition-all duration-300",
+        "p-6 rounded-3xl border shadow hover:shadow-md pb-6 transition-all duration-300 cursor-pointer",
         className
       )}
       />
