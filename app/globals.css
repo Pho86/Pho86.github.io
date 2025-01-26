@@ -7,7 +7,7 @@ body {
 }
 
 p {
-  @apply leading-relaxed;
+  /* @apply leading-relaxed; */
 }
 
 * {

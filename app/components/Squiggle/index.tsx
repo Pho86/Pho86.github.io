@@ -1,14 +1,17 @@
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import React from "react";
+import { Transition, TargetAndTransition } from "framer-motion";
 
 interface SquiggleProps {
-    item: { name: string; id: string };
-    index: number;
-    isSelected: boolean;
-    setSelectedLink: (name: string) => void;
-    handleScroll: (id: string) => () => void;
-    hero?: boolean;
+  item: { name: string; id: string };
+  index: number;
+  isSelected: boolean;
+  setSelectedLink: (name: string) => void;
+  handleScroll: (id: string) => () => void;
+  hero?: boolean;
+  transition?: Transition;
+  animate?: TargetAndTransition;
 }
 
 export default function Squiggle({
@@ -18,24 +21,30 @@ export default function Squiggle({
   setSelectedLink,
   handleScroll,
   hero = false,
+  transition = { duration: 0.6, delay: 0.05 + 0.1 * index },
+  animate = { opacity: 1, filter: "blur(0px)" },
 }: SquiggleProps) {
   return (
     <motion.li
       initial={{ opacity: 0, filter: "blur(4px)" }}
-      animate={{ opacity: 1, filter: "blur(0px)" }}
-      transition={{ duration: 0.6, delay: 0.05 + 0.1 * index }}
+      animate={animate}
+      transition={transition}
       key={item.name}
       className={twMerge(
         `relative flex leading-6 no-underline cursor-pointer transition-all hover:text-primary-950 hover:font-bold ${
           isSelected ? "font-semibold text-primary-700" : "text-primary-600"
-        } ${index == 0 && "hidden md:block"} `
+        } ${index == 0 && !hero && "hidden md:block"} `
       )}
       onClick={() => {
         setSelectedLink(item.name);
         handleScroll(item.id)();
       }}
-      onMouseEnter={() => { if (hero) setSelectedLink(item.name); }}
-      onMouseLeave={() => { if (hero) setSelectedLink(""); }}
+      onMouseEnter={() => {
+        if (hero) setSelectedLink(item.name);
+      }}
+      onMouseLeave={() => {
+        if (hero) setSelectedLink("");
+      }}
     >
       {item.name}
       {isSelected ? (

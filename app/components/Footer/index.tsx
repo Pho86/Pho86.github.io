@@ -36,7 +36,7 @@ export default function Footer() {
   }, []);
   return (
     <motion.footer
-      className="w-full flex flex-col gap-6 items-center justify-center bg-primary-100 border-t-2 pt-8 px-4 pb-16"
+      className="w-full flex flex-col gap-6 items-center justify-center bg-primary-100 border-t-2 pt-12 px-4 pb-20"
       initial={{ opacity: 0, filter: "blur(4px)" }}
       whileInView={{ opacity: 1, filter: "blur(0px)" }}
       transition={{ duration: 0.6 }}
@@ -106,7 +106,7 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} Philip
         </blockquote>
         <div className="text-primary-600 font-bold">
-          Current Time:{" "}
+          Current Time (PST):{" "}
           <span id="pst-time" className="font-mono font-normal"></span>
         </div>
       </div>

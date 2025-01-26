@@ -35,7 +35,13 @@ export default function AboutSection() {
             philip.huyho@gmail.com
           </Link>
           . I&apos;m always open to learning about new opportunities, and
-          collaborating on creating innovative projects, especially open source.
+          collaborating on creating innovative projects.
+        </p>
+        <p>
+          Some of my favourite technologies currently and ones that I often use,
+          can be seen in the model displayed{" "}
+          <span className="md:inline-block hidden">on the right.</span>{" "}
+          <span className="md:hidden inline-block">below.</span>
         </p>
         <Link href="https://github.com/pho86" target={"_blank"} className="">
           <img

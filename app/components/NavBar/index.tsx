@@ -64,10 +64,10 @@ export default function NavBar() {
             transition={{ duration: 1 }}
         >
           <motion.div
-            className={`flex max-w-default gap-4 w-full px-6 lg:px-2 drop-shadow-sm justify-between h-max pointer-events-auto`}
+            className={`flex max-w-default gap-4 w-full px-6 md:px-2 drop-shadow-sm justify-between h-max pointer-events-auto`}
           >
             <h2 className="text-2xl font-bold py-3 cursor-pointer ">Philip</h2>
-            <ul className="w-full flex justify-end items-center gap-8">
+            <ul className="w-full flex justify-end items-center gap-8 md:px-2">
               {navigation.map((item, index) => {
                 const isSelected = item.name === selectedLink;
                 return (

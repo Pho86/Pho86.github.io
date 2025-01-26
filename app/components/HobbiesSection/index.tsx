@@ -19,7 +19,7 @@ function Hobby({
     <li
       className={twMerge(
         `flex gap-2 py-3 px-3 hover:bg-bg-light cursor-pointer rounded-xl transition-all ${
-          active === hobby ? "bg-bg-light" : "text-primary-500"
+          active === hobby ? "bg-bg-light" : "text-primary-600 font-light"
         }`
       )}
       onClick={onMouseEnter}
@@ -44,7 +44,7 @@ export default function HobbiesSection() {
           Outside of developing software and creating applications, you can find
           me often doing some of these activities in my free time.
         </p>
-        <ul className="flex flex-col font-medium list-disc mt-2">
+        <ul className="flex flex-col font-medium list-disc mt-2 gap-1">
           <Hobby
             active={activeHobby}
             hobby="Listening to music"
