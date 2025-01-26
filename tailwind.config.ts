@@ -14,7 +14,7 @@ export default {
       colors: {
         primary: {
           50: "#fefefe",
-          100: "#f0f0f0",
+          100: "#F6F6F6",
           200: "#dcdede",
           300: "#c1c5c5",
           400: "#9fa4a4",
@@ -24,14 +24,14 @@ export default {
           800: "#070707",
           900: "#020202",
           950: "#000000",
-          "darker": "#5A7D80",
+          "darker": "#34403F",
         },
 
         'primary-dark': "#131212",
         'primary-light': "#3a3a3a",
         'secondary': "#292525",
         'text': "#1D1A1A",
-        'bg-primary': "#F5F5F5",
+        'bg-primary': "#F6F6F6",
         'bg-dark': "#E4E4E4",
         'bg-light': "#EDEDED",
       },

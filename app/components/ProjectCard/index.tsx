@@ -26,7 +26,7 @@ export default function ProjectCard({
   mockup: string;
 }) {
   return (
-    <div className={twMerge("flex gap-2 group flex-col ")}>
+    <div className={twMerge("flex gap-3 group flex-col ")}>
       <Link
         href={external}
         target={"_blank"}
@@ -40,7 +40,7 @@ export default function ProjectCard({
           className="w-full transition-all duration-200 hover:scale-[103%] object-cover"
         />
       </Link>
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-1">
         <div className="flex justify-between">
           <div className="">
             <Link href={github} className="w-full flex">
@@ -50,20 +50,19 @@ export default function ProjectCard({
               </h3>
             </Link>
           </div>
-          <div className="md:hidden flex gap-2 font-bold text-3xl items-center">
+          <div className="flex gap-2 font-bold text-3xl items-center">
             <IconButton target="_blank" href={github}>
               <FaGithub />
             </IconButton>
             <IconButton
               target="_blank"
               href={external}
-              className="hover:text-primary-600 transition-all"
             >
               <FiExternalLink />
             </IconButton>
           </div>
         </div>
-        <div className="flex flex-col gap-2 h-full justify-between mt-1">
+        <div className="flex flex-col gap-2 h-full justify-between">
           <p>{description}</p>
           <div className="flex flex-col gap-2">
             <div className="flex flex-wrap gap-2">

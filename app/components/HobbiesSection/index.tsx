@@ -19,7 +19,7 @@ function Hobby({
     <li
       className={twMerge(
         `flex gap-2 py-3 px-3 hover:bg-bg-light cursor-pointer rounded-xl transition-all ${
-          active === hobby ? "bg-bg-light" : "text-primary-500"
+          active === hobby ? "bg-bg-light" : "text-primary-600 font-light"
         }`
       )}
       onClick={onMouseEnter}
@@ -44,7 +44,7 @@ export default function HobbiesSection() {
           Outside of developing software and creating applications, you can find
           me often doing some of these activities in my free time.
         </p>
-        <ul className="flex flex-col font-medium list-disc mt-2 gap-2">
+        <ul className="flex flex-col font-medium list-disc mt-2 gap-1">
           <Hobby
             active={activeHobby}
             hobby="Listening to music"
@@ -81,18 +81,21 @@ export default function HobbiesSection() {
       </motion.div>
       <motion.div
         key={activeImage}
-        initial={{ opacity: 0, filter: "blur(4px)" }}
-        whileInView={{ opacity: 1, filter: "blur(0px)" }}
-        animate={{ opacity: 1, filter: "blur(0px)" }}
-        exit={{ opacity: 0, filter: "blur(4px)" }}
-        transition={{ duration: 0.5 }}
+        initial={{ filter: "blur(1px)", opacity: .7 }}
+        whileInView={{ filter: "blur(0px)", opacity: 1 }}
+        animate={{ filter: "blur(0px)", opacity: 1 }}
+        exit={{ filter: "blur(1px)", opacity: .7 }}
+        transition={{ 
+          filter: { duration: 0.2 },
+          opacity: { duration: 0.6, delay: 0.2 }
+        }}
       >
         <Image
           src={activeImage}
           alt="Philip Ho's Hobbies"
           width={1080}
           height={720}
-          className="rounded-xl h-[250px] md:h-[400px] object-cover"
+          className="rounded-lg h-[250px] md:h-[400px] object-cover"
         />
       </motion.div>
     </Section>

@@ -36,12 +36,12 @@ export default function Footer() {
   }, []);
   return (
     <motion.footer
-      className="w-full flex flex-col gap-6 items-center justify-center bg-primary-100 border-t-2 pt-8 px-4 pb-16"
+      className="w-full flex flex-col gap-6 items-center justify-center bg-primary-100 border-t-2 pt-12 px-4 pb-20"
       initial={{ opacity: 0, filter: "blur(4px)" }}
       whileInView={{ opacity: 1, filter: "blur(0px)" }}
       transition={{ duration: 0.6 }}
     >
-      <div className="w-full flex flex-col md:flex-row max-w-default items-start gap-4 md:items-center">
+      <div className="w-full flex flex-col md:flex-row max-w-default items-start gap-4 ">
         <div className="w-full flex flex-col gap-3 ">
           <h4 className="font-bold text-3xl">Philip Ho</h4>
           <blockquote className=" text-primary-600">
@@ -100,12 +100,13 @@ export default function Footer() {
           </ul>
         </div>
       </div>
+      
       <div className="max-w-default w-full flex flex-col md:flex-row gap-4 justify-between md:mt-8 ">
-        <blockquote className="font-medium text-lg">
-          Developed and designed by Philip &copy; {new Date().getFullYear()}{" "}
+        <blockquote className="text-lg">
+          &copy; {new Date().getFullYear()} Philip
         </blockquote>
         <div className="text-primary-600 font-bold">
-          Current Time:{" "}
+          Current Time (PST):{" "}
           <span id="pst-time" className="font-mono font-normal"></span>
         </div>
       </div>
