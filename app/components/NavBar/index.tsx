@@ -5,9 +5,11 @@ import { twMerge } from "tailwind-merge";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import Squiggle from "../Squiggle";
+import ThemeSwitcher from "../ThemeSwap";
+
 gsap.registerPlugin(ScrollToPlugin);
 
-export default function NavBar() {
+export default function NavBar({ onChangeDarkMode }: { onChangeDarkMode: () => void }) {
   const handleScroll = (id: string) => () => {
     const element = document.getElementById(id);
     if (element) {
@@ -49,25 +51,29 @@ export default function NavBar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  
 
   return (
     <>
       <div
         className={twMerge(
-          `fixed w-screen flex justify-center pointer-events-none top-0 left-0 z-50 `
+          `fixed w-[100dvw] flex justify-center pointer-events-none top-0 left-0 z-50 `
         )}
       >
-        <motion.nav className={"w-full bg-primary-100 border-b-2 justify-center flex py-1"}
-        initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1 }}
+        <motion.nav
+          className={
+            "w-full bg-primary-100 border-b-2 border-primary-200 justify-center flex py-1"
+          }
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
         >
           <motion.div
             className={`flex max-w-default gap-4 w-full px-6 md:px-2 drop-shadow-sm justify-between h-max pointer-events-auto`}
           >
-            <h2 className="text-2xl py-3 cursor-pointer font-pacifico hover:text-primary-600 transition-all">Philip</h2>
-            <ul className="w-full flex justify-end items-center gap-8 md:px-2">
+            <h2 className="text-2xl py-3 cursor-pointer font-pacifico hover:text-primary-600 transition-all">
+              Philip
+            </h2>
+            <ul className="w-full flex justify-end items-center gap-8 md:px-2 md:mr-4">
               {navigation.map((item, index) => {
                 const isSelected = item.name === selectedLink;
                 return (
@@ -78,9 +84,10 @@ export default function NavBar() {
                     setSelectedLink={setSelectedLink}
                     handleScroll={handleScroll}
                     key={index}
-                    />
+                  />
                 );
               })}
+              <ThemeSwitcher onChangeDarkMode={onChangeDarkMode}/>
             </ul>
           </motion.div>
         </motion.nav>

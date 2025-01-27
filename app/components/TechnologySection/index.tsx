@@ -4,11 +4,25 @@ import { useRef, useState, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Billboard, Image, Text, TrackballControls } from "@react-three/drei";
 
-
-function Logo({ imgSrc, text, position, ...props }: { imgSrc: string; text: string; position: THREE.Vector3 }) {
+function Logo({
+  imgSrc,
+  text,
+  position,
+  isDarkMode,
+  ...props
+}: {
+  imgSrc: string;
+  text: string;
+  isDarkMode: boolean;
+  position: THREE.Vector3;
+}) {
   const [hovered, setHovered] = useState(false);
-  const over = (e: React.PointerEvent) => (e.stopPropagation(), setHovered(true));
+
+  const over = (e: React.PointerEvent) => (
+    e.stopPropagation(), setHovered(true)
+  );
   const out = () => setHovered(false);
+
   return (
     <Billboard position={position} {...props}>
       <Image
@@ -21,7 +35,7 @@ function Logo({ imgSrc, text, position, ...props }: { imgSrc: string; text: stri
       <Text
         position={[0, -1.1, 0]} // Adjust as needed
         fontSize={0.8} // Adjust font size as needed
-        color={"black"}
+        color={isDarkMode ? "white" : "black"} // Dynamically set color based on theme
         onPointerOver={over}
         onPointerOut={out}
       >
@@ -31,9 +45,16 @@ function Logo({ imgSrc, text, position, ...props }: { imgSrc: string; text: stri
   );
 }
 
-function Cloud({ positions }: { positions: [THREE.Vector3, string, string][] }) {
+function Cloud({
+  positions,
+  isDarkMode,
+}: {
+  positions: [THREE.Vector3, string, string][];
+  isDarkMode: boolean;
+}) {
   const groupRef = useRef<THREE.Group>(null);
 
+  // Detect system theme and listen for changes
   // Using the useFrame hook to rotate the group on the x-axis slowly
   useFrame(() => {
     if (groupRef.current) {
@@ -44,19 +65,29 @@ function Cloud({ positions }: { positions: [THREE.Vector3, string, string][] }) 
 
   return (
     <group ref={groupRef}>
-      {positions.map(([pos, imgSrc, label]: [THREE.Vector3, string, string], index: number) => (
-      <Logo
-        key={index}
-        position={pos}
-        imgSrc={imgSrc}
-        text={label}
-      />
-      ))}
+      {positions.map(
+        (
+          [pos, imgSrc, label]: [THREE.Vector3, string, string],
+          index: number
+        ) => (
+          <Logo
+            key={index}
+            position={pos}
+            imgSrc={imgSrc}
+            text={label}
+            isDarkMode={isDarkMode}
+          />
+        )
+      )}
     </group>
   );
 }
 
-export default function TechnologyCloud() {
+export default function TechnologyCloud({
+  isDarkMode,
+}: {
+  isDarkMode: boolean;
+}) {
   const positions: [THREE.Vector3, string, string][] = [
     // Vertical line of P
     [new THREE.Vector3(-5.5, 7.5, 0), "/logos/javascript.svg", "JavaScript"],
@@ -87,7 +118,7 @@ export default function TechnologyCloud() {
     >
       <fog attach="fog" args={["#202025", 0, 80]} />
       <Suspense fallback={null}>
-        <Cloud positions={positions} />
+        <Cloud positions={positions} isDarkMode={isDarkMode} />
       </Suspense>
       {/* @ts-expect-error, controls don't need to be advanced here*/}
       <TrackballControls />

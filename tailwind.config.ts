@@ -6,34 +6,34 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       maxWidth: {
-        'default' : '1280px'
+        'default': '1280px'
       },
       colors: {
+        // Map Tailwind colors to CSS variables
+        'bg-light': 'var(--color-bg-light)',
+        'bg-dark': 'var(--color-bg-dark)',
+        'bg-primary': 'var(--color-bg-primary)',
+        text: 'var(--color-text)',
         primary: {
-          50: "#fefefe",
-          100: "#F6F6F6",
-          200: "#dcdede",
-          300: "#c1c5c5",
-          400: "#9fa4a4",
-          500: "#757C7C",
-          600: "#454a4a",
-          700: "#0f1010",
-          800: "#070707",
-          900: "#020202",
-          950: "#000000",
-          "darker": "#34403F",
+          50: 'var(--color-primary-50)',
+          100: 'var(--color-primary-100)',
+          200: 'var(--color-primary-200)',
+          300: 'var(--color-primary-300)',
+          400: 'var(--color-primary-400)',
+          500: 'var(--color-primary-500)',
+          600: 'var(--color-primary-600)',
+          700: 'var(--color-primary-700)',
+          800: 'var(--color-primary-800)',
+          900: 'var(--color-primary-900)',
+          950: 'var(--color-primary-950)',
+          dark: 'var(--color-primary-dark)',
+          light: 'var(--color-primary-light)',
+          darker: 'var(--color-primary-darker)',
         },
-
-        'primary-dark': "#131212",
-        'primary-light': "#3a3a3a",
-        'secondary': "#292525",
-        'text': "#1D1A1A",
-        'bg-primary': "#F6F6F6",
-        'bg-dark': "#E4E4E4",
-        'bg-light': "#EDEDED",
       },
     },
     fontFamily: {

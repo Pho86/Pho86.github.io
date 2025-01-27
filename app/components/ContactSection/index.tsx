@@ -42,7 +42,6 @@ export default function ContactSection({}: {
             passHref
           >
             <FaLinkedin
-              className="text-4xl hover:text-primary transition-all hover:drop-shadow-primary"
               aria-label="Click to Open Philip Ho's Linkedin"
             />
           </IconButton>
@@ -52,7 +51,6 @@ export default function ContactSection({}: {
             passHref
           >
             <MdEmail
-              className="text-4xl hover:text-primary transition-all hover:drop-shadow-primary"
               aria-label="Click to email Philip Ho"
             />
           </IconButton>

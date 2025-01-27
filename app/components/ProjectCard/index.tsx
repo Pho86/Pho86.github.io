@@ -54,10 +54,7 @@ export default function ProjectCard({
             <IconButton target="_blank" href={github}>
               <FaGithub />
             </IconButton>
-            <IconButton
-              target="_blank"
-              href={external}
-            >
+            <IconButton target="_blank" href={external}>
               <FiExternalLink />
             </IconButton>
           </div>
