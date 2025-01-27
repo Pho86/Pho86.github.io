@@ -11,11 +11,11 @@ import HobbiesSection from "./components/HobbiesSection";
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   useEffect(() => {
-    const bodyClassList = document.body.classList;
+    const htmlClassList = document.documentElement.classList; // Use <html> instead of <body>
     if (isDarkMode) {
-      bodyClassList.add("dark");
+      htmlClassList.add("dark");
     } else {
-      bodyClassList.remove("dark");
+      htmlClassList.remove("dark");
     }
   }, [isDarkMode]);
 
@@ -28,6 +28,7 @@ export default function Home() {
 
     requestAnimationFrame(raf);
   }, []);
+  
 
   return (
     <main className="flex w-full h-full flex-col gap-24">
