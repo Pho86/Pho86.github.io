@@ -32,6 +32,7 @@ function Hobby({
 export default function HobbiesSection() {
   const [activeImage, setActiveImage] = useState("/hobbies/music.jpg");
   const [activeHobby, setActiveHobby] = useState("Listening to music");
+  const [alt, setAlt] = useState("Concert at Vancouver, Downtown");
   return (
     <Section title="Hobbies" id="hobbies" grid="md:grid-cols-2">
       <motion.div
@@ -51,14 +52,16 @@ export default function HobbiesSection() {
             onMouseEnter={() => {
               setActiveImage("/hobbies/music.jpg");
               setActiveHobby("Listening to music");
+              setAlt("Photo of music concert at Vancouver, Downtown at UBC Campus");
             }}
-          />
+            />
           <Hobby
             active={activeHobby}
             hobby="Playing video games"
             onMouseEnter={() => {
               setActiveImage("/hobbies/gaming.jpg");
               setActiveHobby("Playing video games");
+              setAlt("Photo of Valorant VCT game tourney ");
             }}
           />
           <Hobby
@@ -67,32 +70,34 @@ export default function HobbiesSection() {
             onMouseEnter={() => {
               setActiveImage("/hobbies/gym.jpg");
               setActiveHobby("Going to the gym");
+              setAlt("Photo of the gym, containing weights and machines");
             }}
-          />
+            />
           <Hobby
             active={activeHobby}
             hobby="Reading books"
             onMouseEnter={() => {
               setActiveImage("/hobbies/books.jpg");
               setActiveHobby("Reading books");
+              setAlt("Photo of a bookshelf, containing some books that I may or may not have read.");
             }}
           />
         </ul>
       </motion.div>
       <motion.div
         key={activeImage}
-        initial={{ filter: "blur(1px)", opacity: .7 }}
+        initial={{ filter: "blur(1px)", opacity: 0.7 }}
         whileInView={{ filter: "blur(0px)", opacity: 1 }}
         animate={{ filter: "blur(0px)", opacity: 1 }}
-        exit={{ filter: "blur(1px)", opacity: .7 }}
-        transition={{ 
+        exit={{ filter: "blur(1px)", opacity: 0.7 }}
+        transition={{
           filter: { duration: 0.2 },
-          opacity: { duration: 0.6, delay: 0.2 }
+          opacity: { duration: 0.6, delay: 0.2 },
         }}
       >
         <Image
           src={activeImage}
-          alt="Philip Ho's Hobbies"
+          alt={alt}
           width={1080}
           height={720}
           className="rounded-lg h-[250px] md:h-[400px] object-cover"

@@ -35,7 +35,7 @@ export default function ProjectCard({
         <Image
           width={1080}
           height={720}
-          alt={`Mockup Design for ${title}`}
+          alt={`Mockup Design for the project of ${title}, click to view more details`}
           src={`/projects/${projectname}${mockup}`}
           className="w-full transition-all duration-200 hover:scale-[103%] object-cover"
         />

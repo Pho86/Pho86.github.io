@@ -32,6 +32,7 @@ export default function IconButton({
           className
       )}
       onClick={onClick}
+      title={href}
     >
       {href ? (
         <Link href={href} target={target} passHref={passHref}>
