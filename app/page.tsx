@@ -9,7 +9,22 @@ import Footer from "./components/Footer";
 import ContactSection from "./components/ContactSection";
 import HobbiesSection from "./components/HobbiesSection";
 export default function Home() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    if (typeof window !== "undefined") {
+      const savedMode = localStorage.getItem("darkMode");
+      if (savedMode !== null) {
+        return JSON.parse(savedMode);
+      } else {
+        const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        return prefersDarkMode;
+      }
+    }
+    return false; 
+  });
+
+  useEffect(() => {
+    localStorage.setItem("darkMode", JSON.stringify(isDarkMode));
+  }, [isDarkMode]);
   useEffect(() => {
     const htmlClassList = document.documentElement.classList; // Use <html> instead of <body>
     if (isDarkMode) {
