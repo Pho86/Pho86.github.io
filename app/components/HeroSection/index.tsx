@@ -54,7 +54,7 @@ export default function HeroSection() {
             {windowWidth !== null && (
               <motion.div
                 initial={{
-                  x: windowWidth > 768 ? "60%" : "10%",
+                  x: windowWidth > 768 ? "65%" : "10%",
                   scale: 1.1,
                   y: windowWidth < 768 ? "15vh" : "5vh",
                 }}
