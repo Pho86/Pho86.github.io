@@ -2,7 +2,7 @@ import Section from "../Section";
 import { motion } from "motion/react";
 import Link from "next/link";
 import TechnologyCloud from "../TechnologySection";
-export default function AboutSection() {
+export default function AboutSection({ isDarkMode }: { isDarkMode: boolean }) {
   return (
     <Section id="about" bg="bg-light" title="About Me" grid="md:grid-cols-2">
       <motion.div
@@ -15,12 +15,20 @@ export default function AboutSection() {
           Hey, I&apos;m Philip, I love developing web and mobile products
           focusing on providing users with seamless and responsive experiences.
           Creating interactive digital products is a passion of mine, and I
-          enjoy creating projects that solve problems.
+          enjoy building a solution to solve problems.
         </p>
         <p className="text-pretty">
           Feel free to explore my work on{" "}
           <Link
             href="https://github.com/pho86"
+            target={"_blank"}
+            className="text-primary-darker font-bold"
+          >
+            GitHub
+          </Link>{" "}
+          or reach out via email at{" "}
+          <Link
+            href="mailto:philip.huyho@gmail.com"
             target={"_blank"}
             className="text-primary-darker font-bold"
           >
@@ -54,12 +62,12 @@ export default function AboutSection() {
         </Link>
       </motion.div>
       <motion.div
-        className="h-[400px] md:h-[400px] w-full"
+        className="h-[400px] md:h-[400px] w-full text-primary-950"
         initial={{ opacity: 0, filter: "blur(4px)" }}
         whileInView={{ opacity: 1, filter: "blur(0px)" }}
         transition={{ duration: 0.3, delay: 0.2 }}
       >
-        <TechnologyCloud />
+        <TechnologyCloud isDarkMode={isDarkMode} />
       </motion.div>
     </Section>
   );

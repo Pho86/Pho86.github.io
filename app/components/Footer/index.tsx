@@ -2,10 +2,10 @@
 import React, { useEffect } from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
-import Link from "next/link";
 import { motion } from "motion/react";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import IconButton from "../IconButton";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -48,35 +48,27 @@ export default function Footer() {
             Creating interactive and intuitive adventures digitally. <br />
           </blockquote>
           <div className="flex gap-4">
-            <Link href="https://github.com/pho86" target="__blank" passHref>
-              <FaGithub
-                className="text-4xl hover:text-primary-600 transition-all hover:drop-shadow-primary"
-                aria-label="Click For Philip Ho's Github"
-                title="Click For Philip Ho's Github"
-              />
-            </Link>
-            <Link
-              href="https://www.linkedin.com/in/philippho/"
-              target="__blank"
-              passHref
-            >
-              <FaLinkedin
-                className="text-4xl hover:text-primary-600 transition-all hover:drop-shadow-primary"
-                aria-label="Click to Open Philip Ho's Linkedin"
-                title="Click to Open Philip Ho's Linkedin"
-              />
-            </Link>
-            <Link
-              href="mailto:philip.huyho@gmail.com"
-              target="__blank"
-              passHref
-            >
-              <MdEmail
-                className="text-4xl hover:text-primary-600 transition-all hover:drop-shadow-primary"
-                aria-label="Click to email Philip Ho"
-                title="Click to email Philip Ho"
-              />
-            </Link>
+            <IconButton href="https://github.com/pho86" target="__blank" passHref>
+                        <FaGithub aria-label="Click For Philip Ho's Github" />
+                      </IconButton>
+                      <IconButton
+                        href="https://www.linkedin.com/in/philippho/"
+                        target="__blank"
+                        passHref
+                      >
+                        <FaLinkedin
+                          aria-label="Click to Open Philip Ho's Linkedin"
+                        />
+                      </IconButton>
+                      <IconButton
+                        href="mailto:philip.huyho@gmail.com"
+                        target="__blank"
+                        passHref
+                      >
+                        <MdEmail
+                          aria-label="Click to email Philip Ho"
+                        />
+                      </IconButton>
           </div>
         </div>
         <div className="flex flex-col gap-3">

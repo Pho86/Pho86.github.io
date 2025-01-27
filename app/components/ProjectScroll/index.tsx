@@ -27,17 +27,14 @@ export default function ProjectScroll({ data }: { data: ProjectEntry[] }) {
             transition={{ duration: 0.6 }}
           >
             <div className="md:block sticky hidden flex-col justify-center top-40 self-start max-w-xs lg:max-w-xs md:w-full">
-              <h3 className="hidden md:block text-5xl font-semibold text-primary-700 ">
+              <h3 className="hidden md:block text-5xl font-semibold text-primary-950 ">
                 {item.title}
               </h3>
               <div className="flex gap-4 mt-2 font-bold text-4xl items-center">
                 <IconButton target="_blank" href={item.item.github}>
                   <FaGithub />
                 </IconButton>
-                <IconButton
-                  target="_blank"
-                  href={item.item.external}
-                >
+                <IconButton target="_blank" href={item.item.external}>
                   <FiExternalLink />
                 </IconButton>
               </div>

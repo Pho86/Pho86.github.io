@@ -47,7 +47,6 @@ export default function HeroSection() {
   return (
     <Section
       className="w-full min-h-[90dvh] md:min-h-[100dvh] h-full flex items-center justify-center overflow-x-hidden"
-      bg="bg-primary-50"
       id="home"
     >
       <div className="flex h-full gap-5 w-full z-[100] md:z-auto">
@@ -131,7 +130,7 @@ export default function HeroSection() {
           </motion.ul>
         </div>
       </div>
-      <motion.div
+      {!signatureAnimation && <motion.div
         className="absolute left-0 -bottom-5 lg:left-auto  lg:bottom-auto flex flex-col items-center gap-6 md:gap-12 pointer-events-auto"
         initial={{ x: 0, y: 0 }}
         animate={{ x: "15vw", y: windowWidth && windowWidth < 768 ? "0vh" : "5vh" }}
@@ -184,7 +183,7 @@ export default function HeroSection() {
             transition={{ delay: 3.2, duration: 0.5 }}
           />
         </div>
-      </motion.div>
+      </motion.div> }
     </Section>
   );
 }
@@ -216,7 +215,7 @@ function LogoImage({
       width={125}
       height={125}
       className={twMerge(
-        "p-6 rounded-3xl border shadow hover:shadow-md pb-6 transition-all duration-300 cursor-pointer",
+        "p-6 rounded-3xl border bg-bg-light border-bg-primary  shadow hover:shadow-md pb-6 transition-all duration-300 cursor-pointer",
         className
       )}
       />

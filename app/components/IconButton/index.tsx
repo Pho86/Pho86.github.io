@@ -28,14 +28,14 @@ export default function IconButton({
   return (
     <button
       className={twMerge(
-        `transition-all duration-150 gap-1 text-4xl text-primary-600 hover:text-primary-800 ` +
+        `transition-all duration-150 gap-1 text-4xl text-primary-600 hover:text-primary-800 hover:scale-105 `,
           className
       )}
       onClick={onClick}
       title={href}
     >
       {href ? (
-        <Link href={href} target={target} passHref={passHref}>
+        <Link href={href} target={target} passHref={passHref} className="">
           {children}
         </Link>
       ) : (
