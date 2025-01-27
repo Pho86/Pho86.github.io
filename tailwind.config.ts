@@ -36,6 +36,9 @@ export default {
         'bg-light': "#EDEDED",
       },
     },
+    fontFamily: {
+      pacifico: ["var(--font-pacifico)"],
+    }
   },
   plugins: [],
 } satisfies Config;

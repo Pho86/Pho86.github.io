@@ -66,7 +66,7 @@ export default function HeroSection() {
               </motion.div>
             )}
           <motion.h1
-            className="text-3xl md:text-5xl font-bold text-pretty leading-tight -mt-6"
+            className="text-3xl md:text-5xl font-medium text-pretty leading-tight -mt-6"
             initial={{ opacity: 0, y: -4, filter: "blur(4px)" }}
             animate={
               signatureAnimation
