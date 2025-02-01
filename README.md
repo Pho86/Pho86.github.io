@@ -1,4 +1,8 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Philip Ho Portfolio
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app). Hosted on github pages, [https://pho86.github.io/](https://pho86.github.io/). The site is exported statically in order to be hosted on github pages.
+
+## Licensing 
+This project is licensed with the Mozilla Public License (MPL), because I am open to my code being open-sourced and public use, however I would like the code to be somewhat modified before being published to a production state instead of being a direct copy and paste of my code. The code should be accessible and reusable. Furthermore, MPL provides patent protection, to safely protect users and contributors of this repository.
 
 ## Getting Started
 
