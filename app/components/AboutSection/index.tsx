@@ -22,7 +22,7 @@ export default function AboutSection({ isDarkMode }: { isDarkMode: boolean }) {
           <Link
             href="https://github.com/pho86"
             target={"_blank"}
-            className="text-primary-darker font-bold"
+            className="text-primary-800 font-bold transition-all hover:text-primary-600"
           >
             GitHub
           </Link>{" "}
@@ -30,15 +30,7 @@ export default function AboutSection({ isDarkMode }: { isDarkMode: boolean }) {
           <Link
             href="mailto:philip.huyho@gmail.com"
             target={"_blank"}
-            className="text-primary-darker font-bold"
-          >
-            GitHub
-          </Link>{" "}
-          or reach out via email at{" "}
-          <Link
-            href="mailto:philip.huyho@gmail.com"
-            target={"_blank"}
-            className="text-primary-darker font-bold"
+            className="text-primary-800 font-bold transition-all hover:text-primary-600"
           >
             philip.huyho@gmail.com
           </Link>
