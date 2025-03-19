@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Rethink_Sans, Pacifico } from "next/font/google";
 import "./globals.css";
+import { redirect } from 'next/navigation';
 
 const rethinkSans = Rethink_Sans({
   variable: "--font-rethink-sans",
@@ -69,6 +70,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  redirect("http://philipho.co");
   return (
     <html lang="en" suppressHydrationWarning>
 

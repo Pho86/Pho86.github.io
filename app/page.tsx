@@ -26,7 +26,7 @@ export default function Home() {
     localStorage.setItem("darkMode", JSON.stringify(isDarkMode));
   }, [isDarkMode]);
   useEffect(() => {
-    const htmlClassList = document.documentElement.classList; // Use <html> instead of <body>
+    const htmlClassList = document.documentElement.classList; 
     if (isDarkMode) {
       htmlClassList.add("dark");
     } else {
